@@ -13,7 +13,7 @@ struct quest{
   string question;
   string first_answer;
   string second_answer;
-  string third_anwser;
+  string third_answer;
   string fourth_answer;
   int right_index = 0;
 };
