@@ -2,6 +2,7 @@
 #include "testwork.h"
 
 struct quest test[10];
+int right_answers[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 int score = 0;
 
 int main()

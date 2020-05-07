@@ -4,6 +4,7 @@ int testwork(int answer)
 {
     system("clear");
     srand(time(NULL));
+    int score = 0;
     if (answer == 1) {
         loadfiles("files/math.txt");
         cout << "Вы выбрали тест по маьематике! Вот ваши вопросы:" << endl;
@@ -14,6 +15,10 @@ int testwork(int answer)
                  << test[i].second_answer << "3)" << test[i].third_answer
                  << "4)" << test[i].fourth_answer << test[i].right_index
                  << endl;
+            score = rightcheck(i);
+            if (score == 10) {
+                return score;
+            }
         }
     } else if (answer == 2) {
         system("clear");
@@ -26,6 +31,10 @@ int testwork(int answer)
                  << test[i].second_answer << "3)" << test[i].third_answer
                  << "4)" << test[i].fourth_answer << test[i].right_index
                  << endl;
+            score = rightcheck(i);
+            if (score == 10) {
+                return score;
+            }
         }
     } else if (answer == 3) {
         system("clear");
@@ -38,6 +47,10 @@ int testwork(int answer)
                  << test[i].second_answer << "3)" << test[i].third_answer
                  << "4)" << test[i].fourth_answer << test[i].right_index
                  << endl;
+            score = rightcheck(i);
+            if (score == 10) {
+                return score;
+            }
         }
     } else if (answer == 4) {
         system("clear");
@@ -50,16 +63,24 @@ int testwork(int answer)
                  << test[i].second_answer << "3)" << test[i].third_answer
                  << "4)" << test[i].fourth_answer << test[i].right_index
                  << endl;
+            score = rightcheck(i);
+            if (score == 10) {
+                return score;
+            }
         }
     }
-    return 0;
+    return score;
 }
 
-int rightcheck()
+int rightcheck(int i)
 {
     cout << "\nВведите ваш ответ:" << endl;
     int answer;
     cin >> answer;
     if (answer == test[i].right_index) {
+        right_answers[score] = test[i].right_index;
+        score += 1;
     }
+    cout << score << endl;
+    return score;
 }

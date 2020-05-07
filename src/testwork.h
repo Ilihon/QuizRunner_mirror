@@ -4,7 +4,8 @@
 #include "testload.h"
 
 extern struct quest test[10];
-extern score;
+extern int score;
+extern int right_answers[10];
 
 int testwork(int answer);
 int rightcheck(int answer);
