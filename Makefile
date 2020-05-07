@@ -8,6 +8,9 @@ all: bin/main
 run:
 	bin/main
 
+clean:
+	rm build/*.o
+
 bin/main: build/main.o build/testload.o
 	$(g) $^ -o bin/main
 
