@@ -7,7 +7,7 @@ extern struct quest test[10];
 extern int score;
 extern int right_answers[10];
 
-int testwork(int answer);
+void testwork(int answer);
 int rightcheck(int answer);
 
 #endif

@@ -1,6 +1,6 @@
 #include "testwork.h"
 
-int testwork(int answer)
+void testwork(int answer)
 {
     system("clear");
     srand(time(NULL));
@@ -17,7 +17,7 @@ int testwork(int answer)
                  << endl;
             score = rightcheck(i);
             if (score == 10) {
-                return score;
+                break;
             }
         }
     } else if (answer == 2) {
@@ -33,7 +33,7 @@ int testwork(int answer)
                  << endl;
             score = rightcheck(i);
             if (score == 10) {
-                return score;
+                break;
             }
         }
     } else if (answer == 3) {
@@ -49,7 +49,7 @@ int testwork(int answer)
                  << endl;
             score = rightcheck(i);
             if (score == 10) {
-                return score;
+                break;
             }
         }
     } else if (answer == 4) {
@@ -65,11 +65,10 @@ int testwork(int answer)
                  << endl;
             score = rightcheck(i);
             if (score == 10) {
-                return score;
+                break;
             }
         }
     }
-    return score;
 }
 
 int rightcheck(int i)
@@ -77,8 +76,8 @@ int rightcheck(int i)
     cout << "\nВведите ваш ответ:" << endl;
     int answer;
     cin >> answer;
+    right_answers[i] = answer;
     if (answer == test[i].right_index) {
-        right_answers[score] = test[i].right_index;
         score += 1;
     }
     cout << score << endl;

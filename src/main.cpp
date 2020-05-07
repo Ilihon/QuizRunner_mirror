@@ -8,9 +8,9 @@ int score = 0;
 int main()
 {
     setlocale(LC_ALL, "Rus");
-    bool test = true;
+    bool pass = true;
 
-    while (test == true) {
+    while (pass == true) {
         system("clear");
         cout << "\t Добро пожаловать в систему проведения тестов QuizRunner"
              << endl;
@@ -29,7 +29,19 @@ int main()
             // cout << answer;
         }
         testwork(answer);
-        test = false;
+        system("clear");
+        cout << "\tПравильных ответов " << score << endl;
+        cout << "\tВаши ответы:" << endl << "\t";
+        for (int i = 0; i < 10; i++) {
+            cout << right_answers[i] << " ";
+        }
+        cout << endl;
+        cout << "\tПравильные ответы:" << endl << "\t";
+        for (int i = 0; i < 10; i++) {
+            cout << test[i].right_index << " ";
+        }
+        cout << endl;
+        pass = false;
     }
     return 0;
 }
