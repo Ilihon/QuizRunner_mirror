@@ -5,7 +5,8 @@ void testwork(int answer)
     system("clear");
     srand(time(NULL));
     int score = 0;
-    if (answer == 1) {
+    switch(answer){
+      case 1:
         loadfiles("files/math.txt");
         cout << "Вы выбрали тест по математике! Вот ваши вопросы:" << endl;
         for (int i = 0; i < 10; i++) {
@@ -16,9 +17,8 @@ void testwork(int answer)
             }
             system("clear");
         }
-    } else if (answer == 2) {
-        system("clear");
-        srand(time(NULL));
+        return;
+      case 2:
         loadfiles("files/russian.txt");
         cout << "Вы выбрали тест по русскому языку! Вот ваши вопросы:" << endl;
         for (int i = 0; i < 10; i++) {
@@ -29,9 +29,8 @@ void testwork(int answer)
             }
             system("clear");
         }
-    } else if (answer == 3) {
-        system("clear");
-        srand(time(NULL));
+        return;
+      case 3:
         loadfiles("files/history.txt");
         cout << "Вы выбрали тест по истории! Вот ваши вопросы:" << endl;
         for (int i = 0; i < 10; i++) {
@@ -42,7 +41,8 @@ void testwork(int answer)
             }
             system("clear");
         }
-    } else if (answer == 4) {
+        return;
+      case 4:
         system("clear");
         srand(time(NULL));
         loadfiles("files/geography.txt");
@@ -55,7 +55,9 @@ void testwork(int answer)
             }
             system("clear");
         }
+        return;
     }
+    return;
 }
 
 void write_answers(int subject,int index)
