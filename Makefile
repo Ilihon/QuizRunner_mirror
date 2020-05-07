@@ -11,7 +11,7 @@ run:
 clean:
 	rm build/*.o
 
-bin/main: build/main.o build/testload.o
+bin/main: build/main.o build/testload.o build/testwork.o
 	$(g) $^ -o bin/main
 
 build/main.o:
@@ -19,3 +19,6 @@ build/main.o:
 
 build/testload.o:
 	$(g)  $(flags) src/testload.cpp -o $@
+
+build/testwork.o:
+	$(g)  $(flags) src/testwork.cpp -o $@
