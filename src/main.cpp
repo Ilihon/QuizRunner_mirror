@@ -1,23 +1,14 @@
 #include "testload.h"
+#include "testwork.h"
 
 struct quest test[10];
+int score = 0;
 
 int main()
 {
-    system("clear");
-    srand(time(NULL));
-    loadfiles("files/russian.txt");
-    for (int i = 0; i < 10; i++) {
-        cout << endl
-             << i << endl
-             << test[i].question << test[i].first_answer
-             << test[i].second_answer << test[i].third_answer
-             << test[i].fourth_answer << test[i].right_index << endl;
-    }
-
     setlocale(LC_ALL, "Rus");
     bool test = true;
-    int score = 0;
+
     while (test == true) {
         system("clear");
         cout << "\t Добро пожаловать в систему проведения тестов QuizRunner"
@@ -27,7 +18,17 @@ int main()
              << endl;
         cout << "\tВыберете нужное вам направление, введя соответсвующий номер"
              << endl;
-        char answer;
+        int answer = 0;
+        // cin >> answer;
+        // answer = 0;
+        // cout << answer;
+        while ((answer != 1) && (answer != 2) && (answer != 3)
+               && (answer != 4)) {
+            cin >> answer;
+            // cout << answer;
+        }
+        testwork(answer);
+        test = false;
     }
     return 0;
 }
