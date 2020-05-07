@@ -21,14 +21,12 @@ int main()
         int answer = 0;
         while ((answer != 1) && (answer != 2) && (answer != 3)
                && (answer != 4)) {
-            cout << "\tВыберете нужное вам направление, введя соответсвующий "
+          cout << "\tВыберете нужное вам направление, введя соответсвующий "
                     "номер"
                  << endl;
-            char buf[256];
-            cin >> buf;
-            if (atoi(buf) != 0) {
-                answer = atoi(buf);
-            }
+          char buf[256];
+          cin >> buf;
+          answer = answer_convert(buf);
         }
         testwork(answer);
         system("clear");
@@ -66,9 +64,8 @@ int main()
             cout << "Хотите пройти другой тест? (1 - да, 2 - нет) " << endl;
             char buf[256];
             cin >> buf;
-            if (atoi(buf) != 0) {
-                answer = atoi(buf);
-            }
+            answer = answer_convert(buf);
+
         }
         if (answer == 2) {
             cout << "Завершение сеанса " << endl;

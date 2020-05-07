@@ -19,7 +19,6 @@ struct quest{
 };
 
 extern struct quest test[10];
-
 int loadfiles(char *filename);
 
 

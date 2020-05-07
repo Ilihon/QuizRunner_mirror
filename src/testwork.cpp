@@ -1,5 +1,12 @@
 #include "testwork.h"
 
+int answer_convert(char *line){
+  int answer =0;
+  if (atoi(buf) != 0) {
+      answer = atoi(buf);
+  }
+  return answer;
+}
 void testwork(int answer)
 {
     system("clear");
@@ -85,10 +92,7 @@ int rightcheck(int i, int lesson)
             cout << "\nВведите ваш ответ:" << endl;
             char buf[256];
             cin >> buf;
-            if (atoi(buf) != 0) {
-                answer = atoi(buf);
-            }
-            // cout << answer;
+            answer = answer_convert(buf);
         }
     } else {
         while ((answer != 1) && (answer != 2) && (answer != 3)
@@ -96,10 +100,7 @@ int rightcheck(int i, int lesson)
             cout << "\nВведите ваш ответ:" << endl;
             char buf[256];
             cin >> buf;
-            if (atoi(buf) != 0) {
-                answer = atoi(buf);
-            }
-            // cout << answer;
+            answer = answer_convert(buf);
         }
     }
     right_answers[i] = answer;

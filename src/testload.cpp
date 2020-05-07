@@ -1,6 +1,5 @@
 #include "testload.h"
 
-
 int loadfiles(char *filename)
 {
       FILE* f = fopen(filename, "r");
