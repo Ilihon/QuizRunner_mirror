@@ -8,9 +8,25 @@ int score = 0;
 
 TEST(LoadfilesTest, MissingFile)
 {
-  int result = loadfiles("files/MissingFile.txt");
-  int expect = -1;
-  EXPECT_EQ(expect, result);
+    int result = loadfiles("files/MissingFile.txt");
+    int expect = -1;
+    EXPECT_EQ(expect, result);
+}
+
+TEST(AnswerConvert, WrongInput)
+{
+    char buf[256] = "asd";
+    int expect = 0;
+    int result = answer_convert(buf);
+    EXPECT_EQ(expect, result);
+}
+
+TEST(AnswerConvert, RightInput)
+{
+    char buf[256] = "3";
+    int expect = 3;
+    int result = answer_convert(buf);
+    EXPECT_EQ(expect, result);
 }
 
 int main(int argc, char** argv)
