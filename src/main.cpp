@@ -19,9 +19,6 @@ int main()
              << endl;
 
         int answer = 0;
-        // cin >> answer;
-        // answer = 0;
-        // cout << answer;
         while ((answer != 1) && (answer != 2) && (answer != 3)
                && (answer != 4)) {
             cout << "\tВыберете нужное вам направление, введя соответсвующий "
@@ -32,7 +29,6 @@ int main()
             if (atoi(buf) != 0) {
                 answer = atoi(buf);
             }
-            // cout << answer;
         }
         testwork(answer);
         system("clear");

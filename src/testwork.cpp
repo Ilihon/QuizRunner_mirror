@@ -9,11 +9,7 @@ void testwork(int answer)
         loadfiles("files/math.txt");
         cout << "Вы выбрали тест по математике! Вот ваши вопросы:" << endl;
         for (int i = 0; i < 10; i++) {
-            cout << endl
-                 << i + 1 << " вопрос:" << endl
-                 << test[i].question << "1)" << test[i].first_answer << "2)"
-                 << test[i].second_answer << "3)" << test[i].third_answer
-                 << "4)" << test[i].fourth_answer << endl;
+            write_answers(1,i);
             score = rightcheck(i, answer);
             if (score == 10) {
                 break;
@@ -26,11 +22,7 @@ void testwork(int answer)
         loadfiles("files/russian.txt");
         cout << "Вы выбрали тест по русскому языку! Вот ваши вопросы:" << endl;
         for (int i = 0; i < 10; i++) {
-            cout << endl
-                 << i + 1 << " вопрос:" << endl
-                 << test[i].question << "1)" << test[i].first_answer << "2)"
-                 << test[i].second_answer << "3)" << test[i].third_answer
-                 << "4)" << test[i].fourth_answer << endl;
+            write_answers(2,i);
             score = rightcheck(i, answer);
             if (score == 10) {
                 break;
@@ -43,11 +35,7 @@ void testwork(int answer)
         loadfiles("files/history.txt");
         cout << "Вы выбрали тест по истории! Вот ваши вопросы:" << endl;
         for (int i = 0; i < 10; i++) {
-            cout << endl
-                 << i + 1 << " вопрос:" << endl
-                 << test[i].question << "1)" << test[i].first_answer << "2)"
-                 << test[i].second_answer << "3)" << test[i].third_answer
-                 << endl;
+            write_answers(3,i);
             score = rightcheck(i, answer);
             if (score == 10) {
                 break;
@@ -60,11 +48,7 @@ void testwork(int answer)
         loadfiles("files/geography.txt");
         cout << "Вы выбрали тест по географии! Вот ваши вопросы:" << endl;
         for (int i = 0; i < 10; i++) {
-            cout << endl
-                 << i + 1 << " вопрос:" << endl
-                 << test[i].question << "1)" << test[i].first_answer << "2)"
-                 << test[i].second_answer << "3)" << test[i].third_answer
-                 << "4)" << test[i].fourth_answer << endl;
+            write_answers(4,i);
             score = rightcheck(i, answer);
             if (score == 10) {
                 break;
@@ -72,6 +56,23 @@ void testwork(int answer)
             system("clear");
         }
     }
+}
+
+void write_answers(int subject,int index)
+{
+  switch(subject){
+    case 1:
+    case 2:
+    case 4:
+      cout << endl << index + 1 << " вопрос:" << endl << test[index].question << "1)" << test[index].first_answer << "2)"
+      << test[index].second_answer << "3)" << test[index].third_answer << "4)" << test[index].fourth_answer << endl;
+      return;
+    case 3:
+      cout << endl << index + 1 << " вопрос:" << endl << test[index].question << "1)" << test[index].first_answer << "2)"
+      << test[index].second_answer << "3)" << test[index].third_answer << endl;
+      return;
+  }
+  return;
 }
 
 int rightcheck(int i, int lesson)

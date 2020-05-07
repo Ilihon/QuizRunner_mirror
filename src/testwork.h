@@ -8,6 +8,7 @@ extern int score;
 extern int right_answers[10];
 
 void testwork(int answer);
+void write_answers(int subject,int index);
 int rightcheck(int i, int lesson);
 
 #endif
