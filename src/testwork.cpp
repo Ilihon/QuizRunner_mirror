@@ -1,6 +1,8 @@
 #include "testwork.h"
 
-int answer_convert(char *line){
+int answer_convert(){
+  char buf[256];
+  cin >> buf;
   int answer =0;
   if (atoi(buf) != 0) {
       answer = atoi(buf);
@@ -90,17 +92,13 @@ int rightcheck(int i, int lesson)
     if (lesson == 3) {
         while ((answer != 1) && (answer != 2) && (answer != 3)) {
             cout << "\nВведите ваш ответ:" << endl;
-            char buf[256];
-            cin >> buf;
-            answer = answer_convert(buf);
+            answer = answer_convert();
         }
     } else {
         while ((answer != 1) && (answer != 2) && (answer != 3)
                && (answer != 4)) {
             cout << "\nВведите ваш ответ:" << endl;
-            char buf[256];
-            cin >> buf;
-            answer = answer_convert(buf);
+            answer = answer_convert();
         }
     }
     right_answers[i] = answer;

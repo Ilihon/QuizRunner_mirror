@@ -24,9 +24,7 @@ int main()
           cout << "\tВыберете нужное вам направление, введя соответсвующий "
                     "номер"
                  << endl;
-          char buf[256];
-          cin >> buf;
-          answer = answer_convert(buf);
+          answer = answer_convert();
         }
         testwork(answer);
         system("clear");
@@ -62,9 +60,7 @@ int main()
         answer = 0;
         while ((answer != 1) && (answer != 2)) {
             cout << "Хотите пройти другой тест? (1 - да, 2 - нет) " << endl;
-            char buf[256];
-            cin >> buf;
-            answer = answer_convert(buf);
+            answer = answer_convert();
 
         }
         if (answer == 2) {
