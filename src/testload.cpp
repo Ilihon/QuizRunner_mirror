@@ -12,10 +12,11 @@ int loadfiles(char *filename)
           while (!feof(f)) {
               if (fgets(buf, 4096, f) > 0 && 0 != strcmp(buf, "")) {
                 if(buf[0]=='#'){
-                  strcpy(test[number].question,buf);
+                  test[number].question = buf;
                 }
               }
           }
       }
+      return 0;
 
 }
