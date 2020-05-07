@@ -17,15 +17,21 @@ int main()
         cout << "\t       Здесь доступны тесты по 4м направлениям!" << endl;
         cout << "\t   1.Математика 2.Русский язык 3.История 4.География"
              << endl;
-        cout << "\tВыберете нужное вам направление, введя соответсвующий номер"
-             << endl;
+
         int answer = 0;
         // cin >> answer;
         // answer = 0;
         // cout << answer;
         while ((answer != 1) && (answer != 2) && (answer != 3)
                && (answer != 4)) {
-            cin >> answer;
+            cout << "\tВыберете нужное вам направление, введя соответсвующий "
+                    "номер"
+                 << endl;
+            char buf[256];
+            cin >> buf;
+            if (atoi(buf) != 0) {
+                answer = atoi(buf);
+            }
             // cout << answer;
         }
         testwork(answer);
