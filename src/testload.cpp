@@ -17,9 +17,7 @@ int loadfiles(char *filename)
       int sec_quest_ban = 0;
       while (!feof(f)) {
           if (fgets(buf, 4096, f) > 0 && 0 != strcmp(buf, "")) {
-            //cout << buf;
             if(buf[0]=='#'){
-              //cout << endl << choose_rand;
               if(rand_count == choose_rand+rand_check){
                 rand_check +=2;
                 choose_rand = rand() % 2;
