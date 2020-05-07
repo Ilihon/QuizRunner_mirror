@@ -13,8 +13,7 @@ void testwork(int answer)
                  << i + 1 << " вопрос:" << endl
                  << test[i].question << "1)" << test[i].first_answer << "2)"
                  << test[i].second_answer << "3)" << test[i].third_answer
-                 << "4)" << test[i].fourth_answer << test[i].right_index
-                 << endl;
+                 << "4)" << test[i].fourth_answer << endl;
             score = rightcheck(i);
             if (score == 10) {
                 break;
@@ -30,8 +29,7 @@ void testwork(int answer)
                  << i + 1 << " вопрос:" << endl
                  << test[i].question << "1)" << test[i].first_answer << "2)"
                  << test[i].second_answer << "3)" << test[i].third_answer
-                 << "4)" << test[i].fourth_answer << test[i].right_index
-                 << endl;
+                 << "4)" << test[i].fourth_answer << endl;
             score = rightcheck(i);
             if (score == 10) {
                 break;
@@ -48,7 +46,7 @@ void testwork(int answer)
                  << i + 1 << " вопрос:" << endl
                  << test[i].question << "1)" << test[i].first_answer << "2)"
                  << test[i].second_answer << "3)" << test[i].third_answer
-                 << test[i].right_index << endl;
+                 << endl;
             score = rightcheck(i);
             if (score == 10) {
                 break;
@@ -65,8 +63,7 @@ void testwork(int answer)
                  << i + 1 << " вопрос:" << endl
                  << test[i].question << "1)" << test[i].first_answer << "2)"
                  << test[i].second_answer << "3)" << test[i].third_answer
-                 << "4)" << test[i].fourth_answer << test[i].right_index
-                 << endl;
+                 << "4)" << test[i].fourth_answer << endl;
             score = rightcheck(i);
             if (score == 10) {
                 break;

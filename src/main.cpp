@@ -41,10 +41,28 @@ int main()
         for (int i = 0; i < 10; i++) {
             cout << right_answers[i] << " ";
         }
-        cout << endl;
+        cout << endl << " ";
         cout << "\tПравильные ответы:" << endl << "\t";
         for (int i = 0; i < 10; i++) {
             cout << test[i].right_index << " ";
+        }
+        cout << endl << " ";
+        for (int i = 0; i < 10; i++) {
+            cout << test[i].right_index << ") ";
+            switch (test[i].right_index) {
+            case 1:
+                cout << test[i].first_answer << " ";
+                break;
+            case 2:
+                cout << test[i].second_answer << " ";
+                break;
+            case 3:
+                cout << test[i].third_answer << " ";
+                break;
+            case 4:
+                cout << test[i].fourth_answer << " ";
+                break;
+            }
         }
         cout << endl;
         pass = false;
