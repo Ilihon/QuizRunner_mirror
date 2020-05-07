@@ -46,26 +46,38 @@ int main()
         for (int i = 0; i < 10; i++) {
             cout << test[i].right_index << " ";
         }
-        cout << endl << " ";
+        cout << endl << "\t ";
         for (int i = 0; i < 10; i++) {
             cout << test[i].right_index << ") ";
             switch (test[i].right_index) {
             case 1:
-                cout << test[i].first_answer << " ";
+                cout << test[i].first_answer << "\t ";
                 break;
             case 2:
-                cout << test[i].second_answer << " ";
+                cout << test[i].second_answer << "\t ";
                 break;
             case 3:
-                cout << test[i].third_answer << " ";
+                cout << test[i].third_answer << "\t ";
                 break;
             case 4:
-                cout << test[i].fourth_answer << " ";
+                cout << test[i].fourth_answer << "\t ";
                 break;
             }
         }
         cout << endl;
-        pass = false;
+        answer = 0;
+        while ((answer != 1) && (answer != 2)) {
+            cout << "Хотите пройти другой тест? (1 - да, 2 - нет) " << endl;
+            char buf[256];
+            cin >> buf;
+            if (atoi(buf) != 0) {
+                answer = atoi(buf);
+            }
+        }
+        if (answer == 2) {
+            cout << "Завершение сеанса " << endl;
+            pass = false;
+        }
     }
     return 0;
 }

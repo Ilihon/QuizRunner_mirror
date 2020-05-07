@@ -14,10 +14,11 @@ void testwork(int answer)
                  << test[i].question << "1)" << test[i].first_answer << "2)"
                  << test[i].second_answer << "3)" << test[i].third_answer
                  << "4)" << test[i].fourth_answer << endl;
-            score = rightcheck(i);
+            score = rightcheck(i, answer);
             if (score == 10) {
                 break;
             }
+            system("clear");
         }
     } else if (answer == 2) {
         system("clear");
@@ -30,7 +31,7 @@ void testwork(int answer)
                  << test[i].question << "1)" << test[i].first_answer << "2)"
                  << test[i].second_answer << "3)" << test[i].third_answer
                  << "4)" << test[i].fourth_answer << endl;
-            score = rightcheck(i);
+            score = rightcheck(i, answer);
             if (score == 10) {
                 break;
             }
@@ -47,7 +48,7 @@ void testwork(int answer)
                  << test[i].question << "1)" << test[i].first_answer << "2)"
                  << test[i].second_answer << "3)" << test[i].third_answer
                  << endl;
-            score = rightcheck(i);
+            score = rightcheck(i, answer);
             if (score == 10) {
                 break;
             }
@@ -64,31 +65,43 @@ void testwork(int answer)
                  << test[i].question << "1)" << test[i].first_answer << "2)"
                  << test[i].second_answer << "3)" << test[i].third_answer
                  << "4)" << test[i].fourth_answer << endl;
-            score = rightcheck(i);
+            score = rightcheck(i, answer);
             if (score == 10) {
                 break;
             }
+            system("clear");
         }
-        system("clear");
     }
 }
 
-int rightcheck(int i)
+int rightcheck(int i, int lesson)
 {
     int answer = 0;
-    while ((answer != 1) && (answer != 2) && (answer != 3) && (answer != 4)) {
-        cout << "\nВведите ваш ответ:" << endl;
-        char buf[256];
-        cin >> buf;
-        if (atoi(buf) != 0) {
-            answer = atoi(buf);
+    if (lesson == 3) {
+        while ((answer != 1) && (answer != 2) && (answer != 3)) {
+            cout << "\nВведите ваш ответ:" << endl;
+            char buf[256];
+            cin >> buf;
+            if (atoi(buf) != 0) {
+                answer = atoi(buf);
+            }
+            // cout << answer;
         }
-        // cout << answer;
+    } else {
+        while ((answer != 1) && (answer != 2) && (answer != 3)
+               && (answer != 4)) {
+            cout << "\nВведите ваш ответ:" << endl;
+            char buf[256];
+            cin >> buf;
+            if (atoi(buf) != 0) {
+                answer = atoi(buf);
+            }
+            // cout << answer;
+        }
     }
     right_answers[i] = answer;
     if (answer == test[i].right_index) {
         score += 1;
     }
-    cout << score << endl;
     return score;
 }
