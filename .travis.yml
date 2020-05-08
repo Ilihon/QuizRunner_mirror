@@ -3,5 +3,5 @@ compiler: g++
 dist: xenial
 
 script:
-  make
-  make test
+  - make
+  - make test
