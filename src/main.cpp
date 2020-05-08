@@ -12,6 +12,7 @@ int main()
 
     while (pass == true) {
         system("clear");
+        score = 0;
         cout << "\t Добро пожаловать в систему проведения тестов QuizRunner"
              << endl;
         cout << "\t       Здесь доступны тесты по 4м направлениям!" << endl;
