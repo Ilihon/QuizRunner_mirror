@@ -13,6 +13,13 @@ TEST(LoadfilesTest, MissingFile)
     EXPECT_EQ(expect, result);
 }
 
+TEST(LoadfilesTest, ExistingFile)
+{
+    int result = loadfiles("files/math.txt");
+    int expect = 0;
+    EXPECT_EQ(expect, result);
+}
+
 TEST(AnswerConvert, WrongInput)
 {
     char buf[256] = "asd";
@@ -24,6 +31,14 @@ TEST(AnswerConvert, WrongInput)
 TEST(AnswerConvert, RightInput)
 {
     char buf[256] = "3";
+    int expect = 3;
+    int result = answer_convert(buf);
+    EXPECT_EQ(expect, result);
+}
+
+TEST(AnswerConvert, SemiRightInput)
+{
+    char buf[256] = "3fsda";
     int expect = 3;
     int result = answer_convert(buf);
     EXPECT_EQ(expect, result);
