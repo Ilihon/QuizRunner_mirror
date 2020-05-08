@@ -36,3 +36,8 @@ bin/test:  build/test.o build/testload.o build/testwork.o
 
 build/test.o:
 	$(g) -std=c++11 $(flags) test-cover/test.cpp -I $(GDIR)/include -o $@
+
+format:
+	clang-format -i ./src/*.h
+	clang-format -i ./src/*.cpp
+	clang-format -i ./test-cover/*.cpp

@@ -44,6 +44,14 @@ TEST(AnswerConvert, SemiRightInput)
     EXPECT_EQ(expect, result);
 }
 
+TEST(AnswerConvert, SemiWrongInput)
+{
+    char buf[256] = "fsda3";
+    int expect = 0;
+    int result = answer_convert(buf);
+    EXPECT_EQ(expect, result);
+}
+
 int main(int argc, char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
