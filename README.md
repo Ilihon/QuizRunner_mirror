@@ -10,6 +10,7 @@
 # Сборка и запуск приложения
 
   *$ git clone https://github.com/Ilihon/QuizRunner_mirror.git
+  
   *$ cd Test
 
   *$ make
